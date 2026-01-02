@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Riddle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+
+<body>
+
+  <div id="app">
+    <h1>Daily Riddle</h1>
+    <p id="streak">🔥 Streak: 0</p>
+
+
+    <p id="riddle"></p>
+
+
+    <button id="revealBtn">Reveal Answer</button>
+
+    <p id="answer" style="display:none;">
+      Silence
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
